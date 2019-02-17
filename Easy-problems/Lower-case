@@ -1,0 +1,36 @@
+class Solution:
+    def toLowerCase(self, str: 'str') -> 'str':
+        s=list(str)
+        for i,v in enumerate(s):
+            if ord(v)<91 and ord(v)>=65:
+                s[i]=chr(ord(v)+32)
+        s="".join(s)
+        return s
+
+def stringToString(input):
+    import json
+
+    return json.loads(input)
+
+def main():
+    import sys
+    import io
+    def readlines():
+        for line in io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8'):
+            yield line.strip('\n')
+
+    lines = readlines()
+    while True:
+        try:
+            line = next(lines)
+            str = stringToString(line);
+            
+            ret = Solution().toLowerCase(str)
+
+            out = (ret);
+            print(out)
+        except StopIteration:
+            break
+
+if __name__ == '__main__':
+    main()
