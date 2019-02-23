@@ -1,3 +1,3 @@
-# LeetCode-Questions:1 question per day challenge
+# LeetCode-Questions:
 
 Solving the problems at Leetcode.com
